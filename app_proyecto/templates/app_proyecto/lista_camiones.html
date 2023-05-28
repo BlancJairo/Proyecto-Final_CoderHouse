@@ -31,7 +31,7 @@
                     <td> {{camion.modelo}} </td>
                     <td> {{camion.ano}} </td>
                     <td> 
-                        Ver  
+                        <a href="{% url 'ver_camiones' camion.id %}"> Ver </a> 
                     </td>                    
                     <td> 
                         <a href="{% url 'editar_camiones' camion.id %}"> Editar </a>   

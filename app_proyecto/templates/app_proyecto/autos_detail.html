@@ -1,0 +1,24 @@
+{% extends "app_proyecto/base.html" %} 
+
+{% block contenido %} 
+<p>
+    <strong>Marca: </strong> {{object.marca}}
+</p>
+<p>
+    <strong>Modelo: </strong> {{object.modelo}}
+</p>
+<p>
+    <strong>Año: </strong> {{object.ano}}
+</p>
+<p>
+    <strong>Color: </strong> {{object.color}}
+</p>
+<p>
+    <strong>Equipamiento: </strong> {{object.equipamiento}}
+</p>
+<p>
+    <strong>Descripción: </strong> {{object.descripcion}}
+</p>
+<br>
+<a href="{% url 'autos'%}">Volver a la lista</a>
+{% endblock contenido %}

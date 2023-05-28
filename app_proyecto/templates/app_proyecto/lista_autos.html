@@ -31,7 +31,7 @@
                     <td> {{auto.modelo}} </td>
                     <td> {{auto.ano}} </td>
                     <td>
-                        Ver
+                        <a href="{% url 'ver_auto' auto.id %}"> Ver </a>
                     </td>
                     <td> 
                         <a href="{% url 'editar_auto' auto.id %}"> Editar </a>   
