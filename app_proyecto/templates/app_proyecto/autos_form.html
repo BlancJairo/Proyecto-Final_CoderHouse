@@ -1,0 +1,11 @@
+{% extends "app_proyecto/base.html" %} 
+
+{% block contenido %} 
+<h1>Publicar un Auto</h1>
+<form method="post"> 
+     {% csrf_token %}
+     {{ form.as_p }}
+     <input type="submit" value = "Enviar">
+</form>
+<a href="{% url 'autos'%}">Volver a la lista</a>
+{% endblock contenido %}

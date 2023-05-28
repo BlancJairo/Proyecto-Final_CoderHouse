@@ -1,0 +1,29 @@
+[33mcommit 1306c75b8b300e37961ed6572bab401bf3d1d098[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: BlancJairo <jairoexeblanc@gmail.com>
+Date:   Sat May 27 23:20:23 2023 -0300
+
+     arreglos de funcionamiento
+
+[33mcommit 641304cee2ba2616477e48bd9ffff7c3f2ca6e4c[m
+Author: BlancJairo <jairoexeblanc@gmail.com>
+Date:   Sat May 27 22:18:06 2023 -0300
+
+    agregué la confirmacion de eliminacion
+
+[33mcommit a586741b2a278880615c0db8839e2c881f5632bb[m
+Author: BlancJairo <jairoexeblanc@gmail.com>
+Date:   Sat May 27 21:29:34 2023 -0300
+
+    arreglé los problemas y logré que funcionen editar, eliminar, crear, buscar
+
+[33mcommit d5ee46f6ce3c3289a47656b3c0eb33697986b8e7[m
+Author: BlancJairo <jairoexeblanc@gmail.com>
+Date:   Sat May 27 19:43:42 2023 -0300
+
+    cree la db
+
+[33mcommit b91af6790b9e3ace954005af94c4ebc5dc0c6adc[m
+Author: BlancJairo <jairoexeblanc@gmail.com>
+Date:   Sat May 27 19:03:35 2023 -0300
+
+    cree el proyecto final con:app, form, view, template
