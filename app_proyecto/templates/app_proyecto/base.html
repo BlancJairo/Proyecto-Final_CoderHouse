@@ -33,10 +33,15 @@
                       </ul>
                     </div>
                     {% if user.is_authenticated %}
+                    
                     <div class="btn-group">
-                      <button type="button" class="btn btn-secondary">{{user}}</button>
+                      <button type="button" class="btn btn-secondary"><img src="{{ user.avatar.imagen.url }}" viewBox="0 0 32 32" width="30" height="30"/>{{user}}</button>
+                      
                       <ul class="dropdown-menu">
                         <li><a class="btn btn-primary" href="{% url 'editar_perfil'%}">Editar mi perfil</a></li>
+                        {% if user.avatar.imagen.url == null %}
+                        <li><a class="btn btn-primary" href="{% url 'agregar_avatar'%}">Agregar Avatar</a></li>
+                        {% endif %}
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="btn btn-primary" href="{% url 'logout'%}">Cerrar sesión</a></li>
                       </ul>
@@ -59,11 +64,10 @@
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item"><a href="#!">Ayuda</a></li>
-                            <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Contacto</a></li>
                       
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Curso de Python - CoderHouse.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Blanc, Jairo Exeqiel.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
