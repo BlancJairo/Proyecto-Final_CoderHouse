@@ -1,5 +1,5 @@
 """
-URL configuration for proyecto_final project.
+URL configuration for pre_entrega project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,13 +14,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from proyecto_final.views import inicio
 
+from django.urls import path
+from django.contrib import admin
+from perfiles.views import registro, login_view, CustomLogoutView
+
+
+                
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', inicio, name="inicio"),
-    path('listados/', include("app_proyecto.urls")),
-    path('perfiles/', include("perfiles.urls"))#con esto incluyo las urls de la app
+    path('registro/', registro, name="registro"),
+    path('login/', login_view, name="login"),
+    path('logout/', CustomLogoutView.as_view(), name="logout"),
 ]
