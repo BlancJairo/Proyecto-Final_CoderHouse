@@ -37,24 +37,38 @@
                       </ul>
                     </div>
                     {% if user.is_authenticated %}
-                        <div class="dropdown me-2">
+                        
+                        {% if user.avatar.imagen.url == "" %}
+                            <div class="dropdown me-2">
                             
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
-                                <img src="{{ user.avatar.imagen.url }}" viewBox="0 0 20 20" width="20" height="20"/> {{user}}
-                            </button>
-                            <ul class="dropdown-menu">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                    {{user}}
+                                </button>
+                                <ul class="dropdown-menu">
                                 <li><a class="navbar-brand" href="{% url 'editar_perfil'%}">Editar mi perfil</a></li>
-                                {% if user.avatar.imagen.url == null %}
                                 <li><a class="navbar-brand" href="{% url 'agregar_avatar'%}">Agregar Avatar</a></li>
-                                {% endif %}
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="navbar-brand" href="{% url 'logout'%}">Cerrar sesión</a></li>
-                            </ul>
-                        </div>
+                                </ul>
+                            </div>
+                        {% else %}
+                            <div class="dropdown me-2">
+
+                            
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                  <img src="{{ user.avatar.imagen.url }}" viewBox="0 0 20 20" width="20" height="20"/> {{user}}
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="navbar-brand" href="{% url 'editar_perfil'%}">Editar mi perfil</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="navbar-brand" href="{% url 'logout'%}">Cerrar sesión</a></li>
+                                </ul>
+                            </div>
+                        {% endif %}   
                     {% else %}
                 <div>
-                    <a class="btn btn-primary" href="{% url 'login'%}">Inicio de sesión</a>
-                    <a class="btn btn-primary" href="{% url 'registro'%}">Registrarse</a>
+                    <a class="btn btn-success" href="{% url 'login'%}">Inicio de sesión</a>
+                    <a class="btn btn-dark" href="{% url 'registro'%}">Registrarse</a>
                 </div>
                     {% endif %}
                   
@@ -70,12 +84,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">Ayuda</a></li>
-                            <li class="list-inline-item"><a href="#!">Contacto</a></li>
-                      
-                        </ul>
                         <p class="text-muted small mb-4 mb-lg-0">&copy; Blanc, Jairo Exeqiel.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">Tel: +549 3447-455306</p>
+                        <p class="text-muted small mb-4 mb-lg-0">E-mail: jairoexeblanc@gmail.com</p>                          
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
