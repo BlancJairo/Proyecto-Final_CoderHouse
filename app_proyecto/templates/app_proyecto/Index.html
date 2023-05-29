@@ -1,7 +1,7 @@
 {% extends "app_proyecto/base.html" %} <!--esta es la ruta de donde extendemos el html-->
 
 {% block contenido%}<!--esto abre el bloque que se agrega-->
- <h1>Bienvenidos {{user}} </h1>
+ <h1>Bienvenido {{user.first_name}} </h1>
  <img src="{{ user.avatar.imagen.url }}" />
 {% endblock contenido%}
 

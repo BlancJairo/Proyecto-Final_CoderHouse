@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Inicio</title>
+        <title>Inicio</title>      
         <!-- Favicon-->
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
@@ -19,13 +19,13 @@
     </head>
 
     <body>
-        <div>
-            <nav class="navbar navbar-light bg-light static-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
             
-   
-                
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'inicio'%}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'sobre_mi'%}">Acerca de mi</a>
                 <div class="d-flex">
-                    <a class="navbar-brand" href="{% url 'inicio'%}">Inicio</a>
                     <div class="dropdown me-1">
                       <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
                         Articulos
@@ -40,7 +40,7 @@
                         <div class="dropdown me-2">
                             
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
-                                <img src="{{ user.avatar.imagen.url }}" viewBox="0 0 25 25" width="25" height="25"/> {{user}}
+                                <img src="{{ user.avatar.imagen.url }}" viewBox="0 0 20 20" width="20" height="20"/> {{user}}
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="navbar-brand" href="{% url 'editar_perfil'%}">Editar mi perfil</a></li>
@@ -60,9 +60,9 @@
                   
                 </div>
                 
+            </div>
+        </nav>
 
-            </nav>
-        </div>
         {% block contenido%}<!--esto abre el bloque que se agrega-->
         {% endblock contenido%}
         <!-- Footer-->
