@@ -7,3 +7,4 @@ class form (forms.Form):
     color = forms.CharField(required=True, max_length=15)
     equipamiento = forms.CharField(required=True, max_length=100)
     descripcion = forms.CharField(required=True, max_length=200) 
+    
